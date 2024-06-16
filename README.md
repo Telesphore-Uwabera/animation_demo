@@ -15,12 +15,11 @@ These instructions will help you set up the project on your local machine for de
 
 ### Installing
 
-1. **Clone the repository:**
+1. Clone the repository:
 
-   ```bash
    git clone https://github.com/your_username/animation_demo.git
    cd animation_demo
-   ```
+   
 
 2. **Get the dependencies:**
 
