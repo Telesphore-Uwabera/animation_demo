@@ -69,7 +69,7 @@ class _TextAnimationScreenState extends State<TextAnimationScreen> with SingleTi
           opacity: _animation,
           child: Text(
             _words[_currentIndex],
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
           ),
         ),
       ),
