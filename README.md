@@ -142,5 +142,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to the Flutter team for their comprehensive documentation and resources.
 - Inspired by various online tutorials and articles on Flutter animations.
-
-```
