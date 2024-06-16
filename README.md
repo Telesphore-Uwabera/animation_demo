@@ -18,11 +18,11 @@ These instructions will help you set up the project on your local machine for de
 
 1. **Clone the repository:**
 
-   ```bash
+   
    git clone [https://github.com/telesphore-uwabera/animation_demo.git](https://github.com/Telesphore-Uwabera/animation_demo)
    cd animation_demo
 
-   ```
+   
 
 2. **Get the dependencies:**
 
