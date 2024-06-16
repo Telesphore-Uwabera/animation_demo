@@ -38,7 +38,7 @@ These instructions will help you set up the project on your local machine for de
 
 ## Project Structure
 
-```
+```plain textt
 animation_demo/
 ├── lib/
 │   ├── main.dart         # Main entry point of the application
