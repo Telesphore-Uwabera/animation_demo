@@ -16,7 +16,7 @@ These instructions will help you set up the project on your local machine for de
 
 ### Installing
 
-1. #Clone the repository:
+1. Clone the repository:
 
    
    git clone [https://github.com/telesphore-uwabera/animation_demo.git](https://github.com/Telesphore-Uwabera/animation_demo)
@@ -24,17 +24,17 @@ These instructions will help you set up the project on your local machine for de
 
    
 
-2. #Get the dependencies:
+2. Get the dependencies:
 
    
    flutter pub get
   
 
-3. **Run the app:**
+3. Run the app:
 
-   ```bash
+  
    flutter run
-   ```
+  
 
 ## Project Structure
 
