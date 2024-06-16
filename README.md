@@ -1,8 +1,7 @@
-# animation_demo
 ```markdown
-# Flutter Animation Demo
+# Flutter Text Animation Demo
 
-This project demonstrates a simple animation implemented in Flutter. The animation shows a ball bouncing up and down, showcasing the use of `AnimationController`, `CurvedAnimation`, and `AnimatedBuilder`.
+This project demonstrates a simple text animation implemented in Flutter. The animation shows a series of words that fade in and out, showcasing the use of `AnimationController`, `CurvedAnimation`, and `FadeTransition`.
 
 ## Getting Started
 
@@ -16,29 +15,28 @@ These instructions will help you set up the project on your local machine for de
 
 ### Installing
 
-1. Clone the repository:
+1. **Clone the repository:**
 
-   
-   git clone [https://github.com/telesphore-uwabera/animation_demo.git](https://github.com/Telesphore-Uwabera/animation_demo)
+   ```bash
+   git clone https://github.com/your_username/animation_demo.git
    cd animation_demo
+   ```
 
-   
+2. **Get the dependencies:**
 
-2. Get the dependencies:
-
-   
+   ```bash
    flutter pub get
-  
+   ```
 
-3. Run the app:
+3. **Run the app:**
 
-  
+   ```bash
    flutter run
-  
+   ```
 
 ## Project Structure
 
-```plain text
+```plaintext
 animation_demo/
 ├── lib/
 │   ├── main.dart         # Main entry point of the application
@@ -47,15 +45,15 @@ animation_demo/
 
 ## Animation Details
 
-The animation in this project is a simple bouncing ball animation. The key components used include:
+The animation in this project is a simple text animation where words fade in and out. The key components used include:
 
 - **`AnimationController`**: Manages the animation.
 - **`CurvedAnimation`**: Adds a curve to the animation.
-- **`AnimatedBuilder`**: Rebuilds the widget tree when the animation value changes.
+- **`FadeTransition`**: Animates the opacity of the widget.
 
 ### Example Code
 
-Here's a snippet of the core animation code:
+Here's the core animation code:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -154,3 +152,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to the Flutter team for their comprehensive documentation and resources.
 - Inspired by various online tutorials and articles on Flutter animations.
+```
