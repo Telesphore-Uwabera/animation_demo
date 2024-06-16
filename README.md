@@ -133,7 +133,7 @@ class _TextAnimationScreenState extends State<TextAnimationScreen> with SingleTi
 
 ## Demo Video
 
-Check out the demo video to see the animation in action: [Demo Video Link](https://example.com/demo-video)
+Check out the demo video to see the animation in action: [Demo Video Link](https://drive.google.com/file/d/1zSU8AnPOZAVYfNFEvHKCOzWAGOsLecVi/view?usp=sharing)
 
 ## Contributing
 
