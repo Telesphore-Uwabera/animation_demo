@@ -21,17 +21,13 @@ These instructions will help you set up the project on your local machine for de
    cd animation_demo
    
 
-2. **Get the dependencies:**
+2. Get the dependencies:
 
-   ```bash
    flutter pub get
-   ```
 
-3. **Run the app:**
+3. Run the app:
 
-   ```bash
    flutter run
-   ```
 
 ## Project Structure
 
