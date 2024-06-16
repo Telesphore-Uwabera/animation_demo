@@ -1,42 +1,55 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BouncingBallApp());
+  runApp(MyApp());
 }
 
-class BouncingBallApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Bouncing Ball Animation')),
-        body: BouncingBall(),
+      title: 'Flutter Text Animation',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: TextAnimationScreen(),
     );
   }
 }
 
-class BouncingBall extends StatefulWidget {
+class TextAnimationScreen extends StatefulWidget {
   @override
-  _BouncingBallState createState() => _BouncingBallState();
+  _TextAnimationScreenState createState() => _TextAnimationScreenState();
 }
 
-class _BouncingBallState extends State<BouncingBall> with SingleTickerProviderStateMixin {
+class _TextAnimationScreenState extends State<TextAnimationScreen> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
+  final List<String> _words = ['Hello!', 'Welcome', 'To', 'Flutter', 'App', 'That', 'Allows', 'Animation'];
+  int _currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
-    )..repeat(reverse: true);
+    );
 
-    _animation = Tween<double>(begin: 0, end: 300).animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeInOut,
-    ));
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+
+    _controller.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        setState(() {
+          _currentIndex = (_currentIndex + 1) % _words.length;
+        });
+        _controller.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        _controller.forward();
+      }
+    });
+
+    _controller.forward();
   }
 
   @override
@@ -47,20 +60,18 @@ class _BouncingBallState extends State<BouncingBall> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: AnimatedBuilder(
-        animation: _animation,
-        builder: (context, child) {
-          return Container(
-            margin: EdgeInsets.only(top: _animation.value),
-            width: 50,
-            height: 50,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              shape: BoxShape.circle,
-            ),
-          );
-        },
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Text Animation'),
+      ),
+      body: Center(
+        child: FadeTransition(
+          opacity: _animation,
+          child: Text(
+            _words[_currentIndex],
+            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
