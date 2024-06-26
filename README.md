@@ -1,4 +1,3 @@
-```markdown
 # Flutter Text Animation Demo
 
 This project demonstrates a simple text animation implemented in Flutter. The animation shows a series of words that fade in and out, showcasing the use of `AnimationController`, `CurvedAnimation`, and `FadeTransition`.
